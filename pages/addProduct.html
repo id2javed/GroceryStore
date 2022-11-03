@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body style='background-image: url("../images/supermarketcart_main.jpg"); background-size: cover;'>
+    <div id="mainMenu"></div><br>
+    <div class="container mt-4 w-50">
+        <form id="productForm">
+            <table class="table table-borderless" style="box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.50);">
+                <thead class="table-dark">
+                    <tr>
+                        <th colspan="3" class="text-center">
+                            <h4>Add Products</h4>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Product Category</b></td>
+                        <td>
+                            <select class="form-select" id="selectCategory" onchange="onChangeCategory();">
+                                <option value="">Select Category</option>
+                                <option value="Basket">Basket</option>
+                                <option value="Freezer">Freezer</option>
+                                <option value="Pantry">Pantry</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span id="spanProductCategory" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Product Sub Category</b></td>
+                        <td>
+                            <select class="form-select" id="selectSubCategory" onchange="onChangeSubCategory();">
+                                <option value="">Select Sub Category</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span id="spanProductSubCategory" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Product Name</b></td>
+                        <td>
+                            <select class="form-select" id="selectProductName">
+                                <option value="">Select Product</option>
+                            </select>
+                        </td>
+                        <td>
+                            <span id="spanProductName" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Product Price </b></td>
+                        <td>
+                            <input class="form-control" 
+                                type="text" 
+                                id="txtProductPrice" 
+                                placeholder="Product Price"
+                                onkeypress="isValidPrice(event);" />
+                        </td>
+                        <td>
+                            <span id="spanProductPrice" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Product Stock </b></td>
+                        <td>
+                            <input class="form-control" 
+                                type="text" 
+                                id="txtProductStock" 
+                                placeholder="Product Stock"
+                                onkeypress="isValidStock(event);" />
+                        </td>
+                        <td>
+                            <span id="spanProductStock" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input class="btn btn-success" type="button" value="Add" onclick="addProduct();" />
+                            <input class="btn btn-dark" type="button" value="Update" onclick="updateProduct();" />
+                            <input class="btn btn-secondary" type="reset" value="Cancel" />
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-center">
+                            <div id="displayMessage"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS Bundle -->
+    <script src="../common/constants.js"></script>
+    <script src="../common/validation.js"></script>
+    <!-- Custom Database Bundle -->
+    <script src="../websql/database.js"></script>
+    <!-- Common JS Bundle -->
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/addProduct.js"></script>
+</body>
+
+</html>

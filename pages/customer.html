@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Bill</title>
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body style='background-image: url("../images/supermarketcart_main.jpg"); background-size: cover;'>
+    <div id="mainMenu"></div><br>
+    <div class="container mt-4 w-50">
+        <!-- <h1>Customer Bill System</h1> -->
+        <form id="customerForm">
+            <table class="table table-borderless" style="box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.50);">
+                <thead class="table-dark">
+                    <tr>
+                        <th colspan="3" class="text-center">
+                            <h4>Customer Bills</h4>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>Bill Number</b></td>
+                        <td>
+                            <input class="form-control" type="text" id="txtBillNumber" readonly />
+                        </td>
+                        <td>
+                            <span id="spanBillNumber" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Purchase Date</b></td>
+                        <td>
+                            <input class="form-control" type="text" id="txtPurchaseDate" readonly />
+                        </td>
+                        <td>
+                            <span id="spanPurchaseDate" style="color: rgb(238, 5, 5);" ></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Custom Name</b></td>
+                        <td>
+                            <input class="form-control" type="text" id="txtCustomerName" onkeypress="isValidName(event);" />
+                        </td>
+                        <td>
+                            <span id="spanCustomerName" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <b>Mobile Number </b></td>
+                        <td>
+                            <input class="form-control" type="number" id="txtMobileNumber" onkeypress="isValidMobile(event);"  />
+                        </td>
+                        <td>
+                            <span id="spanMobileNumber" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="3">
+                            <input class="btn btn-success" type="button" value="Generate" onclick="generateBill();" />
+                            <input class="btn btn-dark" type="reset" value="Cancel" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="3">
+                            <div id="displayMessage"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+        <div id="renderProductDetails"></div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS Bundle -->
+    <script src="../common/constants.js"></script>
+    <script src="../common/validation.js"></script>
+    <!-- Custom Database Bundle -->
+    <script src="../websql/database.js"></script>
+    <!-- Common JS Bundle -->
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/customer.js"></script>
+</body>
+</html>

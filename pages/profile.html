@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icon CSS -->
+	<link href="../css/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body style='background-image: url("../images/supermarketcart_main.jpg"); background-size: cover;'>
+    <div id="mainMenu"></div><br>
+    <div class="container mt-4 w-50">
+        <form id="profileForm">
+            <table class="table table-borderless table-light border">
+                <thead class="table-dark">
+                    <tr>
+                        <th colspan="2" class="text-center">
+                            <h4>Edit Profile</h4>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> Name</td>
+                        <td>
+                            <!-- <p id="name"></p> -->
+                            <input class="form-control" type="text" id="name" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mobile</td>
+                        <td>
+                            <!-- <p id="mobile"></p> -->
+                            <input class="form-control" type="text" id="mobile" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email </td>
+                        <td>
+                            <!-- <p id="email"></p> -->
+                            <input class="form-control" type="text" id="email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>
+                            <!-- <p> ******** </p> -->
+                            <input class="form-control" type="password" id="password" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input class="btn btn-success" type="button" value="Update" onclick="updateProfile();"/>
+                            <input class="btn btn-dark" type="reset" value="Cancel" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS Bundle -->
+    <script src="../scripts/index.js"></script>
+    <!-- <script src="../scripts/mainMenuForAdmin.js"></script> -->
+    <script src="../scripts/profile.js"></script>
+</body>
+
+</html>

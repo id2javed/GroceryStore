@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icon CSS -->
+	<link href="../css/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body style='background-image: url("../images/supermarketcart_main.jpg"); background-size: cover;'>
+    <div id="mainMenu"></div>
+    <div class="container mt-4 w-50">
+        <table class="table table-borderless" style="box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.50);">
+            <thead class="table-dark">
+                <tr>
+                    <th>Product Search</th>
+                    <th><input class="form-control" type="search" id="searchProduct" placeholder="Search Product" onkeypress="searchProduct(this);"></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th> <span id="displayMessage"></span> </th>
+                </tr>
+            </thead>
+        </table>
+        <div id="renderProductDetails"></div>
+    </div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS Bundle -->
+    <script src="../scripts/index.js"></script>
+    <script src="../common/constants.js"></script>
+    <script src="../scripts/productDetails.js"></script>
+</body>
+
+</html>

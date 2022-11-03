@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap Icon CSS -->
+	<link href="../css/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body style='background-image: url("../images/supermarketcart_main.jpg"); background-size: cover;'>
+    <div id="mainMenu"></div>
+    <div class="container mt-5 w-50">
+        <form id="loginForm">
+            <table class="table table-borderless" style="box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.50);">
+                <thead class="table-dark">
+                    <tr>
+                        <th colspan="3" class="text-center">
+                            <h3>Login Page</h3>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><b>Username</b></td>
+                        <td>
+                            <input class="form-control" type="text" id="txtUsername" />
+                        </td>
+                        <td>
+                            <span id="usernameSpan" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Password</b></td>
+                        <td>
+                            <input class="form-control" type="password" id="txtPassword" onkeydown="handleEnter(event)" />
+                            <!-- <input class="form-check-input" type="checkbox" onclick="togglePassword();"> -->
+                        </td>
+                        <td>
+                            <button class="btn btn-light" onclick="togglePassword();" type="button">
+                                <i id="eyeIcon" class="bi-eye"></i>
+                                <!-- <i class="bi bi-eye-slash"></i> -->
+                            </button>
+                            <span id="passwordSpan" style="color: rgb(238, 5, 5);"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="3">
+                            <input class="form-check-input" type="checkbox" id="chkRemember" />
+                            <label class="form-check-label" for="flexCheckDefault"><b>Remember Me</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="3">
+                            <input class="btn btn-success" type="button" value="Login" onclick="onClickHander();" />
+                            <input class="btn btn-dark" type="reset" value="Cancel" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="3">
+                            <div id="displayMessage"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS Bundle -->
+    <script src="../scripts/index.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="../common/validation.js"></script>
+</body>
+
+</html>
